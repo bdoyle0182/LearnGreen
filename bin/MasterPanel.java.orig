@@ -1,0 +1,48 @@
+import java.awt.CardLayout;
+
+import javax.swing.JPanel;
+
+
+public class MasterPanel extends JPanel {
+
+	private String currentPlayerName;
+	OpeningScreenPanel osPanel;
+	Game gPanel;
+	HighScorePanel hsPanel;
+<<<<<<< HEAD
+	HelpPanel hPanel;
+=======
+	HelpScreenPanel hPanel;
+>>>>>>> ad5e978975dc42164dfcb726110359b7d1b2b607
+	
+	public MasterPanel() {
+		this.setLayout(new CardLayout());
+		initGUI();
+	}
+	
+	public void initGUI() {
+		osPanel = new OpeningScreenPanel(this); 
+		gPanel = new Game(this);
+		hsPanel = new HighScorePanel(this);
+<<<<<<< HEAD
+		hPanel = new HelpPanel(this);
+=======
+		hPanel = new HelpScreenPanel(this);
+>>>>>>> ad5e978975dc42164dfcb726110359b7d1b2b607
+		
+	    add(osPanel, "main");
+	    add(gPanel, "game");
+	    add(hsPanel, "highscores");
+	    add(hPanel, "help");
+	}
+	
+	public String getCurrentPlayerName() {
+		return currentPlayerName;
+	}
+	
+	public void setCurrentPlayerName(String nameIn) {
+		currentPlayerName = nameIn;
+	}
+	
+};
+
